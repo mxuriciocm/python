@@ -67,3 +67,11 @@ for i in range(n):
 agregar_reina(n,m)
 for row in tablero:
     print(*row)
+
+# usar un método recursivo con backtracking.
+# El método recursivo es el siguiente: Se recibe el tablero y se pide poner n reinas. Se busca secuencialmente una casilla desocupada, no amenazada por otras reinas. 
+# Si se encuentra, se pone una reina y luego se invoca recursivamente la misma función para poner n-1 reinas.
+# El backtracking aparece cuando no se logran colocar otra reinas. En tal caso, se deshace la última reina y se busca otra casilla más adelante,
+#  desocupada, reintentando colocarla y comprobar si así se logran las ocho reinas. Si finalmente no se encuentra ninguna casilla apropiada,
+#  se retrocede un nivel y se prueba a reubicar la reina anterior, y asi sucesivamente.
+#La función free(row, col) chequea que la casilla no este afectada por alguna otra reina.
